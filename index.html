@@ -3,111 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Downloads | J Soft</title>
+    <title>J Soft - Download Software Tools</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%233b82f6'/%3E%3Cpath d='M30 50 L45 65 L70 35' stroke='white' stroke-width='8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
+    <div class="bg-pattern"></div>
+    
     <header class="main-header">
         <div class="container">
-            <div class="logo">
-                <div class="logo-mark">
-                    <i class="fas fa-bolt"></i>
-                </div>
-                <span class="logo-name">J Soft</span>
+            <div class="header-inner">
+                <a class="logo" href="/">
+                    <svg class="logo-img" viewBox="0 0 100 100"><rect width="100" height="100" rx="20" fill="#3b82f6"/><path d="M30 50 L45 65 L70 35" stroke="white" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div class="logo-title">J Soft</div>
+                </a>
+                <nav class="main-nav">
+                    <a href="/download"><span class="text">Download</span></a>
+                    <a href="/secretbind"><span class="text">Keybind</span></a>
+                    <a href="https://github.com/cahyakrisnaaaaaa25/drive"><span class="text">GitHub</span></a>
+                </nav>
             </div>
-            <nav class="main-nav">
-                <a href="#" class="active">Downloads</a>
-            </nav>
         </div>
     </header>
 
-    <main class="main-content">
+    <section class="hero">
         <div class="container">
-            <section class="hero-section">
-                <div class="hero-badge">
-                    <span class="status-dot"></span>
-                    <span class="badge-text">50 files available</span>
+            <div class="hero-inner">
+                <p class="hero-lead"><strong>J Soft</strong> is a software download hub for all your essential tools and utilities. <strong>Fast</strong>, <strong>secure</strong>, and <strong>direct downloads</strong> powered by J Soft.</p>
+                <div class="hero-cta">
+                    <div class="players">Download <span class="current-players">50</span> software tools now!</div>
+                    <a href="/download" class="btn-download">
+                        <span class="text">GO TO DOWNLOAD</span>
+                        <span class="description">50 files available</span>
+                    </a>
+                    <div class="server-link">
+                        <a href="/secretbind" class="btn-block">Secret Keybind</a>
+                    </div>
                 </div>
-                <h1 class="hero-title">Download Hub</h1>
-                <p class="hero-desc">All your software, tools, and utilities in one place. Direct downloads, no ads, no tracking.</p>
-
-                <div class="search-bar">
-                    <i class="fas fa-search"></i>
-                    <input type="text" id="searchInput" placeholder="Search software..." autocomplete="off">
-                </div>
-            </section>
-
-            <div class="filter-bar">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="browser">Browsers</button>
-                <button class="filter-btn" data-filter="dev">Developer</button>
-                <button class="filter-btn" data-filter="media">Media</button>
-                <button class="filter-btn" data-filter="utility">Utilities</button>
-                <button class="filter-btn" data-filter="chat">Communication</button>
             </div>
-
-            <section class="files-section">
-                <div class="section-header">
-                    <h2>Downloads</h2>
-                    <span class="section-meta" id="fileCount">Loading files...</span>
-                </div>
-
-                <div class="files-list" id="filesContainer">
-                    <div class="loading-row">
-                        <div class="loading-icon"></div>
-                        <div class="loading-body">
-                            <div class="loading-line"></div>
-                            <div class="loading-line short"></div>
-                        </div>
-                        <div class="loading-action"></div>
-                    </div>
-                    <div class="loading-row">
-                        <div class="loading-icon"></div>
-                        <div class="loading-body">
-                            <div class="loading-line"></div>
-                            <div class="loading-line short"></div>
-                        </div>
-                        <div class="loading-action"></div>
-                    </div>
-                    <div class="loading-row">
-                        <div class="loading-icon"></div>
-                        <div class="loading-body">
-                            <div class="loading-line"></div>
-                            <div class="loading-line short"></div>
-                        </div>
-                        <div class="loading-action"></div>
-                    </div>
-                </div>
-
-                <div class="empty-state" id="emptyState" style="display: none;">
-                    <div class="empty-icon">
-                        <i class="fas fa-folder-open"></i>
-                    </div>
-                    <h3>No files found</h3>
-                    <p>Try a different search term or filter.</p>
-                </div>
-            </section>
         </div>
-    </main>
+    </section>
 
-    <footer class="main-footer">
+    <section class="features">
+        <div class="container">
+            <div class="preamb">
+                <p>Built for convenience and speed. J Soft is the original community-driven download hub for all essential software. We put users first — developers, gamers, and everyone in between.</p>
+            </div>
+            <h1 class="section-title">What we have for you</h1>
+            <div class="features-grid">
+                <article>
+                    <h2>
+                        <div class="icon-wrap"><i class="fas fa-cloud-download-alt"></i></div>
+                        Direct Downloads
+                    </h2>
+                    <p>All software available for direct download without any middleman or registration.</p>
+                </article>
+                <article>
+                    <h2>
+                        <div class="icon-wrap"><i class="fas fa-bolt"></i></div>
+                        Fast Speed
+                    </h2>
+                    <p>Download at full speed with no throttling or bandwidth limits.</p>
+                </article>
+                <article>
+                    <h2>
+                        <div class="icon-wrap"><i class="fas fa-shield-alt"></i></div>
+                        Safe & Secure
+                    </h2>
+                    <p>All files are verified and safe to download. No malware, no adware.</p>
+                </article>
+                <article>
+                    <h2>
+                        <div class="icon-wrap"><i class="fas fa-folder-open"></i></div>
+                        Organized
+                    </h2>
+                    <p>Browsers, Dev Tools, Media, Utilities, Communication — all categorized.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="container">
+            <h1 class="section-title">Browse Categories</h1>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <i class="fab fa-chrome"></i>
+                    <h3>Browsers</h3>
+                    <p>Chrome, Firefox, Brave, Opera, Edge</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Developer Tools</h3>
+                    <p>VS Code, Git, Docker, Postman, DBeaver</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-music"></i>
+                    <h3>Media</h3>
+                    <p>VLC, Spotify, OBS, HandBrake</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Utilities</h3>
+                    <p>7-Zip, WinRAR, Everything, CCleaner</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>Communication</h3>
+                    <p>Discord, Telegram, Zoom, Teams</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-gamepad"></i>
+                    <h3>Gaming</h3>
+                    <p>Steam, Epic Games, Ubisoft Connect</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Software Files</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Categories</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Free</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Ads</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="download-section">
+        <div class="container">
+            <h1 class="section-title">Ready to download?</h1>
+            <p class="section-desc">Browse our collection of essential software and start downloading now.</p>
+            <a href="/download" class="btn-download-big">
+                <i class="fas fa-download"></i>
+                <span>Go to Download Hub</span>
+            </a>
+        </div>
+    </section>
+
+    <footer>
         <div class="container">
             <div class="footer-inner">
-                <div class="footer-brand">
-                    <div class="logo-mark"><i class="fas fa-bolt"></i></div>
-                    <span>J Soft</span>
+                <div class="footer-links">
+                    <a href="/download">Download</a>
+                    <span class="footer-bullet">&#8226;</span>
+                    <a href="/secretbind">Keybind</a>
+                    <span class="footer-bullet">&#8226;</span>
+                    <a href="https://github.com/cahyakrisnaaaaaa25/drive">GitHub</a>
                 </div>
-                <p class="footer-tag">Powered by J Soft</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy</a>
+                    <span class="footer-bullet">&#8226;</span>
+                    <a href="#">Terms</a>
+                </div>
+                <div class="copyright">Powered by J Soft. All rights reserved.</div>
             </div>
         </div>
     </footer>
-
-    <script src="files.js"></script>
-    <script src="assets/js/script.js"></script>
 </body>
 </html>
