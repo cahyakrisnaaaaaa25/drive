@@ -41,7 +41,12 @@
             <section class="keybind-section">
                 <div class="section-header">
                     <h2>Keybind Map</h2>
-                    <span class="section-meta">Press 20x to trigger</span>
+                    <span class="section-meta" id="keybindCount">Press 20x to trigger</span>
+                </div>
+
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search keybind or file..." autocomplete="off">
                 </div>
 
                 <div class="keybind-grid" id="keybindGrid">
@@ -125,11 +130,20 @@
             { file: "LINESetup.exe", key: "@" }
         ];
 
-        function renderKeybinds() {
+        function renderKeybinds(filtered = keybinds) {
             const grid = document.getElementById('keybindGrid');
+            const count = document.getElementById('keybindCount');
             grid.innerHTML = '';
             
-            keybinds.forEach((kb, index) => {
+            if (filtered.length === 0) {
+                grid.innerHTML = '<div class="keybind-empty">No keybinds found.</div>';
+                count.textContent = '0 results';
+                return;
+            }
+            
+            count.textContent = `${filtered.length} keybinds`;
+            
+            filtered.forEach((kb, index) => {
                 const row = document.createElement('div');
                 row.className = 'keybind-row';
                 row.innerHTML = `
@@ -145,8 +159,28 @@
                 grid.appendChild(row);
             });
         }
-
-        document.addEventListener('DOMContentLoaded', renderKeybinds);
+        
+        function filterKeybinds(query) {
+            if (!query) {
+                renderKeybinds(keybinds);
+                return;
+            }
+            const lower = query.toLowerCase();
+            const filtered = keybinds.filter(kb => 
+                kb.file.toLowerCase().includes(lower) ||
+                kb.key.toLowerCase().includes(lower)
+            );
+            renderKeybinds(filtered);
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            renderKeybinds();
+            
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', (e) => {
+                filterKeybinds(e.target.value.trim());
+            });
+        });
     </script>
 </body>
 </html>
