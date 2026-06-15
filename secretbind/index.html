@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Keybind | J Soft</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23f59e0b'/%3E%3Cpath d='M50 30 L50 55 M50 55 L60 55 M50 55 L40 55' stroke='white' stroke-width='8' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='50' cy='55' r='6' fill='white'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="assets/css/secretbind.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-mark">
+                    <i class="fas fa-key"></i>
+                </div>
+                <span class="logo-name">Secret Keybind</span>
+            </div>
+            <nav class="main-nav">
+                <a href="../index.html">Downloads</a>
+                <a href="#" class="active">Secret</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="hero-section">
+                <div class="hero-badge">
+                    <span class="status-dot secret"></span>
+                    <span class="badge-text">SECRET KEYBIND</span>
+                </div>
+                <h1 class="hero-title">Keybind List</h1>
+                <p class="hero-desc">Secret keybind configuration for J Soft loader. Press the assigned key 20 times to trigger loader.</p>
+            </section>
+
+            <section class="keybind-section">
+                <div class="section-header">
+                    <h2>Keybind Map</h2>
+                    <span class="section-meta">Press 20x to trigger</span>
+                </div>
+
+                <div class="keybind-grid" id="keybindGrid">
+                    <!-- Keybinds injected via JS -->
+                </div>
+            </section>
+
+            <section class="note-section">
+                <div class="note-box">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <p>NOTE: Tekan key 20x untuk trigger loader</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <div class="logo-mark"><i class="fas fa-key"></i></div>
+                    <span>J Soft</span>
+                </div>
+                <p class="footer-tag">Powered by J Soft</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../files.js"></script>
+    <script>
+        const keybinds = [
+            { file: "ChromeSetup.exe", key: "A" },
+            { file: "SteamSetup.exe", key: "B" },
+            { file: "ZoomInstaller.exe", key: "C" },
+            { file: "FirefoxInstaller.exe", key: "D" },
+            { file: "TeamViewer_Setup.exe", key: "E" },
+            { file: "AnyDesk.exe", key: "F" },
+            { file: "WinRAR-x64.exe", key: "G" },
+            { file: "VLCSetup.exe", key: "H" },
+            { file: "DiscordSetup.exe", key: "I" },
+            { file: "NotepadPlusPlusInstaller.exe", key: "J" },
+            { file: "7zSetup.exe", key: "K" },
+            { file: "VSCodeSetup.exe", key: "L" },
+            { file: "TelegramSetup.exe", key: "M" },
+            { file: "PythonInstaller.exe", key: "N" },
+            { file: "SpotifySetup.exe", key: "O" },
+            { file: "CCleanerSetup.exe", key: "P" },
+            { file: "DropboxInstaller.exe", key: "Q" },
+            { file: "EpicInstaller.exe", key: "R" },
+            { file: "UbisoftConnect.exe", key: "S" },
+            { file: "OBSStudio.exe", key: "T" },
+            { file: "GIMPSetup.exe", key: "U" },
+            { file: "GitSetup.exe", key: "V" },
+            { file: "ThunderbirdSetup.exe", key: "W" },
+            { file: "AdguardInstaller.exe", key: "X" },
+            { file: "MalwarebytesSetup.exe", key: "Y" },
+            { file: "OperaSetup.exe", key: "Z" },
+            { file: "BraveSetup.exe", key: "1" },
+            { file: "VirtualBoxSetup.exe", key: "2" },
+            { file: "NotionSetup.exe", key: "3" },
+            { file: "PostmanSetup.exe", key: "4" },
+            { file: "DBeaverSetup.exe", key: "5" },
+            { file: "DockerDesktop.exe", key: "6" },
+            { file: "GrammarlyInstaller.exe", key: "7" },
+            { file: "SublimeTextSetup.exe", key: "8" },
+            { file: "PDF24Creator.exe", key: "9" },
+            { file: "EverythingSetup.exe", key: "0" },
+            { file: "CPU-Z.exe", key: "`" },
+            { file: "SpeccySetup.exe", key: "=" },
+            { file: "XnViewSetup.exe", key: "[" },
+            { file: "SumatraPDFSetup.exe", key: "]" },
+            { file: "LightshotSetup.exe", key: "\\" },
+            { file: "HandBrakeSetup.exe", key: ";" },
+            { file: "FirefoxDevSetup.exe", key: "'" },
+            { file: "ChromeCanarySetup.exe", key: "," },
+            { file: "ShareXSetup.exe", key: "." },
+            { file: "TeamsSetup.exe", key: "/" },
+            { file: "PowerToysSetup.exe", key: "-" },
+            { file: "RainmeterSetup.exe", key: "~" },
+            { file: "ViberSetup.exe", key: "!" },
+            { file: "LINESetup.exe", key: "@" }
+        ];
+
+        function renderKeybinds() {
+            const grid = document.getElementById('keybindGrid');
+            grid.innerHTML = '';
+            
+            keybinds.forEach((kb, index) => {
+                const row = document.createElement('div');
+                row.className = 'keybind-row';
+                row.innerHTML = `
+                    <div class="keybind-file">
+                        <span class="file-name">${kb.file}</span>
+                    </div>
+                    <div class="keybind-separator">|</div>
+                    <div class="keybind-key">
+                        <span class="key-label">Keybind</span>
+                        <span class="key-value">${kb.key}</span>
+                    </div>
+                `;
+                grid.appendChild(row);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', renderKeybinds);
+    </script>
+</body>
+</html>
