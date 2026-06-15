@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloads | J Soft</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%233b82f6'/%3E%3Cpath d='M30 50 L45 65 L70 35' stroke='white' stroke-width='8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-mark">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <span class="logo-name">J Soft</span>
+            </div>
+            <nav class="main-nav">
+                <a href="/" class="active">Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="hero-section">
+                <div class="hero-badge">
+                    <span class="status-dot"></span>
+                    <span class="badge-text">50 files available</span>
+                </div>
+                <h1 class="hero-title">Download Hub</h1>
+                <p class="hero-desc">All your software, tools, and utilities in one place. Direct downloads, no ads, no tracking.</p>
+
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search software..." autocomplete="off">
+                </div>
+            </section>
+
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="browser">Browsers</button>
+                <button class="filter-btn" data-filter="dev">Developer</button>
+                <button class="filter-btn" data-filter="media">Media</button>
+                <button class="filter-btn" data-filter="utility">Utilities</button>
+                <button class="filter-btn" data-filter="chat">Communication</button>
+            </div>
+
+            <section class="files-section">
+                <div class="section-header">
+                    <h2>Downloads</h2>
+                    <span class="section-meta" id="fileCount">Loading files...</span>
+                </div>
+
+                <div class="files-list" id="filesContainer">
+                    <div class="loading-row">
+                        <div class="loading-icon"></div>
+                        <div class="loading-body">
+                            <div class="loading-line"></div>
+                            <div class="loading-line short"></div>
+                        </div>
+                        <div class="loading-action"></div>
+                    </div>
+                    <div class="loading-row">
+                        <div class="loading-icon"></div>
+                        <div class="loading-body">
+                            <div class="loading-line"></div>
+                            <div class="loading-line short"></div>
+                        </div>
+                        <div class="loading-action"></div>
+                    </div>
+                    <div class="loading-row">
+                        <div class="loading-icon"></div>
+                        <div class="loading-body">
+                            <div class="loading-line"></div>
+                            <div class="loading-line short"></div>
+                        </div>
+                        <div class="loading-action"></div>
+                    </div>
+                </div>
+
+                <div class="empty-state" id="emptyState" style="display: none;">
+                    <div class="empty-icon">
+                        <i class="fas fa-folder-open"></i>
+                    </div>
+                    <h3>No files found</h3>
+                    <p>Try a different search term or filter.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <div class="logo-mark"><i class="fas fa-bolt"></i></div>
+                    <span>J Soft</span>
+                </div>
+                <p class="footer-tag">Powered by J Soft</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="files.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
